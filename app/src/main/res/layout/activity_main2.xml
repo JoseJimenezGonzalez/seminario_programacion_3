@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilNumero1"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tilNumero2"
+        android:layout_marginTop="20dp"
+        android:hint="Número 1">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tietNumero1"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:inputType="number">
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilNumero2"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tilNumero1"
+        app:layout_constraintBottom_toBottomOf="@id/tilNumero1"
+        android:layout_marginTop="20dp"
+        android:hint="Número 2">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tietNumero2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number">
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tilNumero1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioButtonSumar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/circle_button_selector"
+            android:text="+"/>
+
+        <RadioButton
+            android:id="@+id/radioButtonRestar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/circle_button_selector"
+            android:text="-"/>
+
+        <RadioButton
+            android:id="@+id/radioButtonMultiplicar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/circle_button_selector"
+            android:text="X"/>
+
+        <RadioButton
+            android:id="@+id/radioButtonDividir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/circle_button_selector"
+            android:text="/"/>
+
+        <!-- Agrega más botones según sea necesario -->
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnRealizarOperacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/radioGroup"
+        android:layout_marginTop="20dp"
+        android:text="Calcular">
+    </Button>
+
+    <TextView
+        android:id="@+id/tvResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnRealizarOperacion"
+        android:layout_marginTop="20dp">
+    </TextView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
